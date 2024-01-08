@@ -32,7 +32,6 @@ body {
 }
 
 header {
-  padding: 1rem 0;
   overflow: hidden;
   background-color: var(--nb2-color);
   border-bottom: 2px solid black;
@@ -46,7 +45,8 @@ header {
 }
 
 .marquee span {
-  padding: 0 1rem;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
 }
 
 @keyframes marquee {
