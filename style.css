@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
-  --nb1-color: #69d2e7;
-  --nb2-color: #7fbc8c;
-  --nb3-color: #e3a018;
-  --nb4-color: #ff6b6b;
-  --nb5-color: #ff69b4;
-  --nb6-color: #9723c9;
+  --nb1-color: #a7dbd8;
+  --nb2-color: #bafca2;
+  --nb3-color: #ffdb58;
+  --nb4-color: #ffa07a;
+  --nb5-color: #ffc0cb;
+  --nb6-color: #c4a1ff;
+  --salmon-color: #ff4343;
   --warning-color: #ffc107;
   --danger-color: #dc3545;
   --light-color: #f8f9fa;
@@ -20,7 +23,7 @@
 body {
   font-family: 'Lexend Mega', sans-serif;
   font-size: 1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0px;
   line-height: 1.5;
   color: black;
 }
@@ -34,10 +37,11 @@ body {
 header {
   overflow: hidden;
   background-color: var(--nb2-color);
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid black;
 }
 
 .marquee {
+  white-space: nowrap;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -47,6 +51,14 @@ header {
 .marquee span {
   padding: 0.5rem 0;
   font-size: 1.2rem;
+  font-weight: 300;
+  text-shadow: -1px 0 var(--light-color), 0 1px var(--light-color),
+    1px 0 var(--light-color), 0 -1px var(--light-color);
+}
+
+.marquee img {
+  width: 2.5rem;
+  margin: 0 0.5rem;
 }
 
 @keyframes marquee {
@@ -62,6 +74,102 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  place-content: center;
   padding: 1rem;
   background-color: var(--nb1-color);
+}
+
+.main-content {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  place-content: center;
+  padding: 3rem;
+  background-color: var(--light-color);
+}
+
+.main-content p {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.main-content_question {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--salmon-color);
+}
+
+.main-content_button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content button {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid black;
+  background-color: var(--light-color);
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-content_button img {
+  position: absolute;
+  width: 7rem;
+  transform: rotate(-23deg);
+  right: 1rem;
+  bottom: -3rem;
+}
+
+h1 {
+  color: var(--salmon-color);
+  margin-bottom: 0.3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 100;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.nb-border {
+  border: 3px solid black; /* Bold, solid stroke */
+  box-shadow: 3px 3px 0px black;
+  border-radius: 15px;
+}
+
+footer {
+  text-align: center;
+  height: fit-content;
+  color: var(--light-color);
+  background-color: black;
+  border-top: 3px solid black;
+}
+
+footer a {
+  padding: 0 0.5rem;
 }
