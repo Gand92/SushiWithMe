@@ -1,0 +1,67 @@
+:root {
+  --nb1-color: #69d2e7;
+  --nb2-color: #7fbc8c;
+  --nb3-color: #e3a018;
+  --nb4-color: #ff6b6b;
+  --nb5-color: #ff69b4;
+  --nb6-color: #9723c9;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  color: black;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  padding: 1rem 0;
+  overflow: hidden;
+  background-color: var(--nb2-color);
+  border-bottom: 2px solid black;
+}
+
+.marquee {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee span {
+  padding: 0 1rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--nb1-color);
+}
